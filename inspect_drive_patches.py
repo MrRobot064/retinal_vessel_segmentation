@@ -15,9 +15,7 @@ NUM_VIS_PATCHES = 16
 # 血管比例直方图的 bin 数量
 HIST_BINS = 30
 
-# 这些是你在“生成脚本”里用到的阈值，仅用于打印提醒
-LBL_MEAN_THRESHOLD = 0.01  # lbl_patch.mean() > ?
-FOV_MEAN_THRESHOLD = 0.8  # fov_patch.mean() > ?
+# 生成脚本用到的阈值，仅用于打印提醒
 PATCHES_PER_IMAGE = 200  # 每张图希望采集多少 patch
 GAMMA = 1.2  # 预处理时使用的 gamma 值（用于记录）
 
@@ -44,8 +42,6 @@ print("----------------------------------------")
 print(f"Configured in gen script (for reference):")
 print(f"  GAMMA                = {GAMMA}")
 print(f"  PATCHES_PER_IMAGE    = {PATCHES_PER_IMAGE}")
-print(f"  LBL_MEAN_THRESHOLD   = {LBL_MEAN_THRESHOLD}")
-print(f"  FOV_MEAN_THRESHOLD   = {FOV_MEAN_THRESHOLD}")
 print("========================================\n")
 
 
@@ -114,7 +110,7 @@ plt.show()
 # ---------------------------------------------------------
 
 print("========================================")
-print("Heuristic suggestions (for you to judge)")
+print("Heuristic suggestions")
 print("========================================")
 
 mean_ratio = ratios.mean()
